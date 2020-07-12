@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Day2 | Github Info</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body><br/>
+        <header>
+            <h2>Get User Information using username</h2>
+        </header>
+    <main>
+        <div class="container">
+            <p id="user-info">
+
+            </p>
+            <input placeholder="Enter Github Username" type="text" id="username" />
+        </div><br/>
+        <button id="btn">Get info</button>
+    </main>
+        <script>
+            let btn = document.querySelector("#btn");
+            let user_info_div = document.querySelector("#user-info");
+            btn.addEventListener("click",function(){
+                let username = document.querySelector("#username").value || alert('enter username').focus();
+                let url = "https://api.github.com/users/"+username;
+                console.log(url);
+
+                fetch(url)
+                .then(r => r.json())
+                .then(r => user_info_div.innerHTML = ` <p> Name - ${r.name}</p> <p> Bio - ${r.bio}</p> <p> Followers - ${r.followers}</p>`);
+            })
+        </script>
+    </body>
+</html>
