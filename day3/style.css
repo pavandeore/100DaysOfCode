@@ -11,3 +11,50 @@ h1{
     font-size: 30px;
     letter-spacing: 3px;
 }
+main{
+    width: 80vw;
+    height: 50vh;
+    margin: 0 auto;
+    background: #c0c0c0;
+}
+#style-div{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    background: #fff;
+}
+ul li{
+    list-style: none;
+}
+ul li:hover{
+    padding-left: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    border-left: 5px solid coral;
+}
+#choice-div{
+    display: flex;
+    justify-content: space-around;
+}
+#choice-div > input{
+    margin: 5px;
+    padding: 5px;
+}
+#btn{
+    margin-top: 30px;
+    width: 200px;
+    position: relative;
+    padding: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    background: crimson;
+    color: #fff;
+}
+#btn:hover{
+    background: #252525;
+    color: #fff;
+}

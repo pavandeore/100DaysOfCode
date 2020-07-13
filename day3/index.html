@@ -5,6 +5,36 @@
     </head>
     <body>
         <h1>Change Styles</h2>
+        <main>
+            <div id="style-div"></div>
+        </main>
+        <ul>
+            <li>Default Height and Width will be 100px.</li>
+            <li>Change Styles using input box.</li>
+        </ul>
+        <div id="choice-div">
+            <input placeholder="Enter height " type="number" id="height" />
+            <input placeholder="Enter width " type="number" id="width" />
+            <input placeholder="Enter Background Color" type="text" id="color" />
+        </div>
+        <button id="btn">Change Styles</button>
         
+        <script>
+
+            btn.addEventListener("click", function(){
+            
+            let btn = document.querySelector("#btn");
+            let ht = document.querySelector("#height").value;
+            let wd = document.querySelector("#width").value;
+            let bg = document.querySelector("#color").value;
+            let ndiv = document.querySelector("#style-div");
+            
+                ndiv.style.height = ht;
+                ndiv.style.width = wd;
+                ndiv.style.background = bg;
+
+            })
+
+        </script>
     </body>
 </html>
