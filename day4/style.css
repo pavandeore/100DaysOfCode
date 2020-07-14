@@ -1,0 +1,40 @@
+html body{
+    font-family: arial;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: turquoise;
+    font-weight: 600;
+}
+h2{
+    font-size: 30px;
+    text-align: center;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.container > div > img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    background-size:cover ;
+}
+.container > div {
+    flex: 1 1 350px;
+}
+
+footer{
+    margin: 0;
+    padding: 20px;
+    background: #252525;
+    color: white;
+    text-align: center;
+}
+footer > p{
+    margin: 0;
+}
