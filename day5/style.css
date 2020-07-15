@@ -12,7 +12,7 @@ ul li{
     list-style: none;
 }
 #social{
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 45%;
 }
@@ -25,6 +25,7 @@ ul li{
 }
 nav{
     display: flex;
+    padding: 10px;
     justify-content: space-evenly;
     align-items: center;
     height: 50px;
@@ -36,18 +37,114 @@ nav > div > a {
 nav > div:hover{
     transform: scale(1.2);
 }
-
 #hero{
+    margin-top: 20px;
     height: 100vh;   
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50vh);
+}
+#hero > div > img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+#hero > div{
+    margin-top: 20px;
+}
+#hero > div > h2{
+    font-size: 40px;
+}
+#hero > div > p{
+    font-size: 24px;
+}
+#hero > div > a > #btn{
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 200px;
+    width: 200px;
+    color: black;
+    border: 2px solid black;
+    background: transparent;
+    cursor: pointer;
 }
 #feature{
     height: 100vh;
 }
-#pricing{
+#feature > h1 {
+    text-align: center;
+    font-size: 40px;
+}
+#feature > div{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+#feature > div > article{
+    margin: 20px 30px;
+    padding: auto 20px;
+}
+#feature > #btn{
+    padding: 10px;
+    font-size: 20px;
+    width: 200px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    color: black;
+    border: 2px solid black;
+    background: transparent;
+    cursor: pointer;
+}
+#pricing > div{
+    margin: 5px;
+    margin-top: 30px;
     height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 200px);
+    grid-gap: 10px;
+}
+#pricing > div{
+padding: 20px;
+}
+#pricing > h1{
+    font-size: 40px;
+    text-align: center;
+}
+#pricing > div > div > p > #btn{
+    margin-top: 10vh;
+    padding: 10px;
+    font-size: 20px;
+    width: 200px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    color: black;
+    border: 2px solid black;
+    background: transparent;
+    cursor: pointer;
+}
+#pricing > div > div > ul {
+    text-align: center;
+    margin-top: 10vh;
+}
+#pricing > div > div > ul > li{
+    padding: 5px;
+}
+#pricing > div > div > ul > li:hover {
+    padding-left: 20px;
+    transition: 1s;
+    cursor: pointer;
 }
 #photos{
     height: 100vh;
+}
+#photos > h1{
+    text-align: center;
+    font-size: 40px;
 }
 footer{
     text-align: center;
@@ -58,4 +155,115 @@ footer{
 footer p a{
     font-weight: 600;
     color: rgb(56, 161, 126);
+}
+
+@media screen and (max-width: 480px){
+ 
+    nav{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 100%;
+    }
+    nav > div{
+        padding: 5px;
+    }
+    #hero{
+        margin-top: 20px;
+        height: 100vh;   
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 50vh);
+    }
+    #hero > div > img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+    #hero > div{
+        margin-top: 20px;
+        padding-top: 20px;
+        text-align: center;
+    }
+    #hero > div > h2{
+        font-size: 40px;
+    }
+    #hero > div > p{
+        font-size: 24px;
+    }
+    #hero > div > a > #btn{
+      margin-top: 10px;
+    }
+    #feature{
+        height: 140vh;
+        margin-top: 30px;
+    }
+    #feature > h1 {
+        text-align: center;
+        font-size: 40px;
+    }
+    #feature > div{
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    #feature > div > article{
+        margin: 20px 30px;
+        padding: auto 20px;
+    }
+    #feature > #btn{
+        padding: 10px;
+        font-size: 20px;
+        width: 200px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        color: black;
+        border: 2px solid black;
+        background: transparent;
+        cursor: pointer;
+    }
+    #pricing > div{
+        margin: 5px;
+        margin-top: 30px;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+    #pricing > div{
+    padding: 20px;
+    }
+    #pricing > h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    #pricing > div > div > p > #btn{
+        margin-top: 10vh;
+        padding: 10px;
+        font-size: 20px;
+        width: 200px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        color: black;
+        border: 2px solid black;
+        background: transparent;
+        cursor: pointer;
+    }
+    #pricing > div > div > ul {
+        text-align: center;
+        margin-top: 10vh;
+    }
+    #pricing > div > div > ul > li{
+        padding: 5px;
+    }
+    #pricing > div > div > ul > li:hover {
+        padding-left: 20px;
+        transition: 1s;
+        cursor: pointer;
+    }
 }
