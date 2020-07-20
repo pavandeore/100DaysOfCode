@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Day7 | Captcha Game</title>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h2>Captcha Game</h2><br/>
+        <div class="container"><br/>
+            <button id="btn2">Generate</button>
+            <p>Generated Captcha</p><br/>
+            <span id="generated"></span><br/>
+            <input type="text" placeholder="Enter Captcha" id="inText" /><br/>
+            <button id="btn1">Check</button>
+        </div>
+        <div id="success">Success</div>
+        <div id="fail">Fail | Try Again Geneate New</div>
+
+        <script>
+            let btn = document.querySelector("#btn1");
+            let btn2 = document.querySelector("#btn2");
+            
+            btn2.addEventListener("click", function(){
+                 random = Math.round(Math.random()*100000000000).toString(36);
+
+                 dum = document.querySelector("#generated");
+                 dum.innerHTML = `<p>${random}</p>`;
+            })
+
+            btn.addEventListener("click", function(){
+            let inText = document.querySelector("#inText").value;
+
+            let success = document.querySelector("#success");
+            let fail = document.querySelector("#fail");
+
+            if(random == inText){
+                success.style.display = "block";
+                fail.style.display = "none";
+            }else{
+                fail.style.display = "block";
+                success.style.display = "none";
+            }
+            })
+
+        </script>
+    </body>
+</html>
