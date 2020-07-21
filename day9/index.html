@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+  <h1>Dice Game Website</h1>
+  <div id="score-div">Result</div>
+  <div class="container">
+    <div id="dice-div">
+        <div id="dice1">
+        </div>
+        <div id="dice2">
+        </div>
+    </div>
+    <div id="name-div">
+      <p>Player 1</p>
+      <p>Player 2</p>
+    </div>
+    <button id="btn1">Refresh</buttodocument.querySelector("#dice1");n>
+  </div>
+
+  <script>
+      
+        let btn = document.querySelector("#btn1");
+        btn.addEventListener("click",function(){
+        let random1 = Math.round(Math.random()*6);
+        let random2 = Math.round(Math.random()*6);
+        let dice1 = document.querySelector("#dice1");
+        let dice2 = document.querySelector("#dice2");
+        let scoreDiv = document.querySelector("#score-div");
+        let win1 = 'WINNER - Player 1';
+        let win2 = 'WINNER - Player 2';
+
+        dice1.innerHTML=random1;
+        dice2.innerHTML=random2;
+
+        if(random1==random2){
+        scoreDiv.innerHTML = 'EQUAL - DRAW';
+        }else if (random1>random2){
+        scoreDiv.innerHTML = win1;
+        }else{
+        scoreDiv.innerHTML = win2;
+        }  
+        })
+
+    </script>
+
+</body>
+</html>

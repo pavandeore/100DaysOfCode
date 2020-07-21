@@ -1,0 +1,44 @@
+h1{
+    text-align: center;
+  }
+  #score-div{
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+  #dice1{
+    height: 100px;
+    width: 100px;
+    background: black;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    line-height: 5;
+  }
+  #dice2{
+    height: 100px;
+    width: 100px;
+    background: black;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    line-height: 5;document.querySelector("#dice1");
+  }
+  #dice-div{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #name-div{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #btn1{
+    width: 200px;
+    padding: 5px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  
+  
+  
