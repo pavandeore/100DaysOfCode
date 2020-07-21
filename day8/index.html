@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Day 8 | Navigation</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <nav class="nav">
+            <div class="a">Home</div>
+            <div class="b">About</div>
+            <div><a id="hideText">Services</a>
+                <ul class="sub-list">
+                    <li>Suboption-1</li>
+                    <li>Suboption-2</li>
+                    <li>Suboption-3</li>
+                    <li>Suboption-4</li>
+                </ul>
+            
+            </div>
+            <div class="c">Contact</div>
+        </nav>
+
+
+        <script>
+            let hideText = document.querySelector("#hideText");
+            let subList = document.querySelector(".sub-list");
+            let a = document.querySelector(".a");
+            let b = document.querySelector(".b");
+            let c = document.querySelector(".c");
+
+            a.addEventListener("mouseout",function(){
+                subList.style.display = "none";
+            })
+            b.addEventListener("mouseout",function(){
+                subList.style.display = "none";
+            })
+            c.addEventListener("mouseout",function(){
+                subList.style.display = "none";
+            })
+            hideText.addEventListener("mouseover",function(){
+                subList.style.display = "block";
+            })
+        </script>
+
+    </body>
+</html>

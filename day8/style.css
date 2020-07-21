@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+    padding: 5px;
+}
+nav{
+    font-family: arial;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 50%;
+    transform: translate(50% 50%);
+    font-size: 25px;
+    padding: 10px;
+    text-shadow: 6px 6px 3px #494848;
+    font-weight: 600;
+}
+nav > div{
+    cursor: pointer;
+}
+.sub-list{
+    display: none;
+    text-shadow: 6px 6px 3px red;
+    
+}
