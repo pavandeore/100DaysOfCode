@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Day 10 | Clock</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Clock</h1>
+        <div id="data">
+
+        </div>
+
+        <script>
+            function time(){
+            
+            let date = new Date();
+            let hrs = date.getHours();
+            let min = date.getMinutes();
+            let sec = date.getSeconds();
+            
+            if(hrs > 12){
+                hrs -= 12;
+            }
+            if(hrs == 12){
+                hrs = 12;
+            }
+            if(min<10){
+                min = `0${min}`;
+            }
+            if(sec<10){
+                sec = `0${sec}`;
+            }
+
+            let div = document.querySelector("#data");
+            div.innerHTML = ` ${hrs} : ${min} : ${sec} `;
+            
+            }
+            
+            setInterval(time,500);
+            
+
+
+        </script>
+    </body>
+
+</html>

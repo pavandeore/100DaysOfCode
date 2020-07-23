@@ -1,0 +1,11 @@
+h1{
+    text-align: center;
+    font-size: 60px;
+}
+#data{
+text-align: center;
+margin-top: 20%;
+font-family: arial;
+font-size: 200px;
+text-shadow: 5px 5px 3px red;
+}
